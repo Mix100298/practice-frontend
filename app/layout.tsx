@@ -1,4 +1,5 @@
 import React from "react";
+import { inter } from "@/app/ui/fonts";
 import "@/app/ui/globals.css";
 
 export default function RootLayout({
@@ -8,21 +9,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head></head>
-      <body>{children}</body>
+      {/* ICON BOLD ROUNDED [BR]*/}
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn-uicons.flaticon.com/2.3.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+        ></link>
+      </head>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
-
-// import React from "react";
-// import "@/app/ui/globals.css";
-// import Navbar from "@/app/components/navbar";
-
-// export default function Layout({ children }: { children: React.ReactNode }) {
-//   return (
-//     <html>
-//       <Navbar />
-//       <body>{children}</body>
-//     </html>
-//   );
-// }
